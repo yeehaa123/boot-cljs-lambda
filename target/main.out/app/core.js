@@ -5,7 +5,7 @@ goog.require('cljs.nodejs');
 cljs.nodejs.enable_util_print_BANG_.call(null);
 app.core.yaml = cljs.nodejs.require.call(null,"js-yaml");
 app.core.handler = (function app$core$handler(event,context){
-return context.succeed(app.core.yaml.safeDump(cljs.core.clj__GT_js.call(null,event)));
+return context.succeed([cljs.core.str("OUTPUT: "),cljs.core.str(app.core.yaml.safeDump(cljs.core.clj__GT_js.call(null,event)))].join(''));
 });
 
 //# sourceMappingURL=core.js.map

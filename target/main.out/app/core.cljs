@@ -6,4 +6,4 @@
 (def yaml (nodejs/require "js-yaml"))
 
 (defn handler [event context]
-  (.succeed context (.safeDump yaml (clj->js event))))
+  (.succeed context (str "OUTPUT: " (.safeDump yaml (clj->js event)))))
